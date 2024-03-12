@@ -7,6 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+use App\Models\Vehicule;
 
 class RedirectIfAuthenticated
 {
@@ -17,14 +18,22 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
+        
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                // Récupérer toutes les voitures
+                $vehicules = Vehicule::all();
+
+                // Ajouter les voitures à la variable de session pour les utiliser dans la vue
+                $request->session()->put('vehicules', $vehicules);
+
+                // Rediriger vers la page d'accueil
                 return redirect(RouteServiceProvider::HOME);
             }
         }
 
         return $next($request);
     }
-}
+    }

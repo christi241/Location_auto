@@ -37,9 +37,8 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{{route('chauffeurs.index')}}" class="nav-link">Home</a>
       </li>
-
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('logout')}}" class="nav-link">se deconecter</a>
+        <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -89,7 +88,6 @@
             </div>
             <!-- Message End -->
           </a>
-
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
             <!-- Message Start -->

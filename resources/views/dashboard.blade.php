@@ -4,7 +4,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <h1 class="text-center fw-bold text-primary">bievenue sur la page sur la page DASHBOARD</h1>
+
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -20,27 +20,43 @@
                         </div>
                     </div>
 
-                    <div class="container h-25">
-                        <div class="row row-cols-1 row-cols-md-3 g-4 ">
-                            <div class="col">
-                                <div class="card ">
-                                    <img src="https://images.pexels.com/photos/2346006/pexels-photo-2346006.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" class="card-img-top rounded-circle" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">voiture a votre disposition</h5>
-                                        <p class="card-text">DAKAR, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+                    <div class="py-4 px-3 px-md-4">
+                        <div class="mb-3 mb-md-4 d-flex justify-content-between">
+                            <div class="h3 mb-0">Nos voitures</div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-6 col-xl-4 mb-3 mb-md-4">
+                                <!-- Card -->
+                                <div class="card h-70">
+                                    <div class="card-header d-flex">
+                                        <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">la voiture est dispponible</h5>
                                     </div>
-                                    <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">Louer</a>
-                                        <a href="#" class="btn btn-secondary">Detaille<i class="fab fa-gratipay"></i></a>
-                                    </div>
-                                    <div class="card-footer text-muted">
-                                        <span><i class="far fa-clock"></i> 10 Minutes Ago</span>
-                                        <span class="ms-3"><i class="fas fa-comments"></i> 45 Comments</span>
+                                    <div class="card-body p-0">
+                                        <div class="media align-items-center px-3 px-md-4 mb-3 mb-md-4">
+                                            <div class="media-body">
+                                                <h4 class="h3 lh-1 mb-2"></h4>
+                                                <p class="small text-muted mb-0">
+                                                    <span>Matricule: 234</span><br>
+                                                    <span>Date d'achat:</span><br>
+                                                    <span>Kilométrage:</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <!-- Insérez ici votre balise <img> pour afficher l'image -->
+                                            <img  height="200" width="350" src="{{asset('photos/voit.jpg')}}">
+                                        </div>
+                                        <a href="#"><button class="btn btn-danger" value="">Voir détails</button></a>
                                     </div>
                                 </div>
+                                <!-- End Card -->
                             </div>
+
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
